@@ -5,6 +5,7 @@ const pool = ["rock", "paper", "scissors"]
 let result
 let playerscore = 0
 let computerscore = 0
+/* Below needs two line to accept lower case */
 let playerinput = prompt("Choose between rock, paper and scissors")
 let playerSelection = playerinput.toLowerCase()
 
@@ -30,6 +31,8 @@ function playRound(playerSelection, computerSelection) {
     } else { result = "Its a draw!"}
   }
 
+/* Below runs 5 games only, need to quit after one gets 5 points instead */
+
 function game() {
     for (let i = 0; i < 5; i++) {
         playRound(playerSelection,getComputerChoice())
@@ -48,14 +51,7 @@ function game() {
     
 }
 
-
-
 game()
-
-
-
-
-
 
 console.log(playerscore)
 console.log(computerscore)
